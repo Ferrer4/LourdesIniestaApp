@@ -1,0 +1,3 @@
+-keep class com.lourdesiniesta.app.models.** { *; }
+-keep class com.google.firebase.** { *; }
+-dontwarn com.google.firebase.**

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/catalogoFragment"
+        android:icon="@drawable/ic_catalogo"
+        android:title="@string/catalogo" />
+
+    <item
+        android:id="@+id/citasFragment"
+        android:icon="@drawable/ic_citas"
+        android:title="@string/citas" />
+
+    <item
+        android:id="@+id/videoclasesFragment"
+        android:icon="@drawable/ic_video"
+        android:title="@string/videoclases" />
+
+    <item
+        android:id="@+id/perfilFragment"
+        android:icon="@drawable/ic_perfil"
+        android:title="@string/perfil" />
+
+</menu>

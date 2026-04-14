@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lourdes Iniesta</string>
+    <string name="catalogo">Catálogo</string>
+    <string name="citas">Citas</string>
+    <string name="videoclases">Videoclases</string>
+    <string name="perfil">Perfil</string>
+    <string name="nombre">Nombre</string>
+    <string name="email">Email</string>
+    <string name="password">Contraseña</string>
+    <string name="iniciar_sesion">Iniciar sesión</string>
+    <string name="crear_cuenta">Crear cuenta nueva</string>
+    <string name="seleccionar_fecha">Seleccionar fecha</string>
+    <string name="seleccionar_hora">Seleccionar hora</string>
+    <string name="reservar_cita">Reservar cita</string>
+</resources>

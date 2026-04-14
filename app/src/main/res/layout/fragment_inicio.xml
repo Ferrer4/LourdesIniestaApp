@@ -1,0 +1,868 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ══════════════════════════════════════ -->
+        <!-- HERO                                   -->
+        <!-- ══════════════════════════════════════ -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:background="@drawable/bg_hero">
+
+            <!-- Círculo decorativo superior derecha -->
+            <View
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:background="@drawable/ic_splash_circle"
+                android:alpha="0.15"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="-60dp"
+                android:layout_marginEnd="-60dp" />
+
+            <!-- Subtítulo superior -->
+            <TextView
+                android:id="@+id/tvHeroSub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SALUD · BELLEZA · BIENESTAR"
+                android:textSize="10sp"
+                android:textColor="#C8956C"
+                android:letterSpacing="0.15"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Línea acento dorada bajo subtítulo -->
+            <View
+                android:id="@+id/divHero"
+                android:layout_width="40dp"
+                android:layout_height="2dp"
+                android:background="#C8956C"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="6dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvHeroSub" />
+
+            <!-- Frase principal -->
+            <TextView
+                android:id="@+id/tvHeroQuote"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="La belleza comienza\ncon la decisión\nde ser uno mismo"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divHero" />
+
+            <!-- Nombre autor frase -->
+            <TextView
+                android:id="@+id/tvHeroAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="— Lourdes Iniesta"
+                android:textSize="12sp"
+                android:textColor="#BCAAA4"
+                android:textStyle="italic"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvHeroQuote" />
+
+            <!-- Botón CTA -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnHeroCita"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pedir cita"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:layout_marginStart="28dp"
+                android:layout_marginBottom="28dp"
+                android:backgroundTint="#C8956C"
+                app:cornerRadius="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- ══════════════════════════════════════ -->
+        <!-- SOBRE LOURDES                          -->
+        <!-- ══════════════════════════════════════ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="28dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Encantada de conocerte"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#3E2723" />
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="3dp"
+                android:background="#C8956C"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Soy Lourdes Iniesta, Coach de Salud y Belleza. Mi misión es acompañarte de forma consciente e integral en tu camino hacia la salud, la felicidad y el bienestar."
+                android:textSize="15sp"
+                android:textColor="#5D4037"
+                android:lineSpacingExtra="4dp" />
+
+            <!-- Cita Joe Dispenza -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_quote"
+                android:padding="16dp"
+                android:layout_marginTop="20dp">
+
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="match_parent"
+                    android:background="#C8956C"
+                    android:layout_marginEnd="12dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="\"Cuando tu conducta coincide con tus intenciones, cuando tus acciones están de acuerdo a tus pensamientos, cuando tu mente, tu corazón y tu cuerpo actúan juntos...\""
+                        android:textSize="13sp"
+                        android:textColor="#5D4037"
+                        android:textStyle="italic"
+                        android:lineSpacingExtra="3dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="— Joe Dispenza"
+                        android:textSize="12sp"
+                        android:textColor="#C8956C"
+                        android:textStyle="bold"
+                        android:layout_marginTop="6dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- ══════════════════════════════════════ -->
+        <!-- SERVICIOS                              -->
+        <!-- ══════════════════════════════════════ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/background"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="28dp"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mis Servicios"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#3E2723"
+                android:layout_marginStart="8dp" />
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="3dp"
+                android:background="#C8956C"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="8dp" />
+
+            <!-- Fila 1 servicios -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <!-- Belleza Saludable -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="#FFFFFF">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:background="#8B6F5E"
+                            android:layout_marginBottom="12dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Belleza\nSaludable"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="#3E2723" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Asesoramiento personalizado en salud, belleza e imagen"
+                            android:textSize="11sp"
+                            android:textColor="#8B6F5E"
+                            android:layout_marginTop="6dp"
+                            android:lineSpacingExtra="2dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Tratamientos Faciales -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="#FFFFFF">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:background="#C8956C"
+                            android:layout_marginBottom="12dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Tratamientos\nFaciales"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="#3E2723" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Diferentes tratamientos dérmicos para cada persona y necesidad"
+                            android:textSize="11sp"
+                            android:textColor="#8B6F5E"
+                            android:layout_marginTop="6dp"
+                            android:lineSpacingExtra="2dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <!-- Fila 2 servicios -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <!-- Tratamientos Corporales -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="#FFFFFF">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:background="#BCAAA4"
+                            android:layout_marginBottom="12dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Tratamientos\nCorporales"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="#3E2723" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Un cuidado especial para cada parte de ti"
+                            android:textSize="11sp"
+                            android:textColor="#8B6F5E"
+                            android:layout_marginTop="6dp"
+                            android:lineSpacingExtra="2dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Naturopatía -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="#FFFFFF">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:background="#A5D6A7"
+                            android:layout_marginBottom="12dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Naturopatía\ny Macrobiótica"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="#3E2723" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Todo el apoyo para llevar una vida sana y equilibrada"
+                            android:textSize="11sp"
+                            android:textColor="#8B6F5E"
+                            android:layout_marginTop="6dp"
+                            android:lineSpacingExtra="2dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <!-- Fila 3 servicios -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="28dp">
+
+                <!-- Master Class -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="#FFFFFF">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:background="#F48FB1"
+                            android:layout_marginBottom="12dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Master Class"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="#3E2723" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Formación online y presencial en salud y bienestar"
+                            android:textSize="11sp"
+                            android:textColor="#8B6F5E"
+                            android:layout_marginTop="6dp"
+                            android:lineSpacingExtra="2dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Oncoestética -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="#FFFFFF">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:background="#90CAF9"
+                            android:layout_marginBottom="12dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Oncoestética\nValencia"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="#3E2723" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Cuidado especializado durante y tras tratamientos oncológicos"
+                            android:textSize="11sp"
+                            android:textColor="#8B6F5E"
+                            android:layout_marginTop="6dp"
+                            android:lineSpacingExtra="2dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- ══════════════════════════════════════ -->
+        <!-- COSMÉTICA LOU                          -->
+        <!-- ══════════════════════════════════════ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:paddingTop="28dp"
+            android:paddingBottom="28dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="28dp"
+                android:paddingEnd="28dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cosmética"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="#3E2723" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="lou"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="#C8956C" />
+
+                    <View
+                        android:layout_width="50dp"
+                        android:layout_height="3dp"
+                        android:background="#C8956C"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Para la persona\nmás especial"
+                    android:textSize="12sp"
+                    android:textColor="#8B6F5E"
+                    android:textStyle="italic"
+                    android:gravity="end" />
+
+            </LinearLayout>
+
+            <!-- Scroll horizontal de productos -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:layout_marginTop="20dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:clipToPadding="false">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Producto 1 -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="3dp"
+                        app:cardBackgroundColor="#FFF8F5">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="lou"
+                                android:textSize="10sp"
+                                android:textColor="#FFFFFF"
+                                android:background="@drawable/bg_tag_lou"
+                                android:paddingStart="6dp"
+                                android:paddingEnd="6dp"
+                                android:paddingTop="2dp"
+                                android:paddingBottom="2dp"
+                                android:layout_marginBottom="10dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="EYE CONTOUR"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:textColor="#3E2723" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Contorno de ojos regenerador"
+                                android:textSize="11sp"
+                                android:textColor="#8B6F5E"
+                                android:layout_marginTop="4dp"
+                                android:lineSpacingExtra="2dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="46,00 €"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="#C8956C"
+                                android:layout_marginTop="10dp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Producto 2 -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="3dp"
+                        app:cardBackgroundColor="#FFF8F5">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="lou"
+                                android:textSize="10sp"
+                                android:textColor="#FFFFFF"
+                                android:background="@drawable/bg_tag_lou"
+                                android:paddingStart="6dp"
+                                android:paddingEnd="6dp"
+                                android:paddingTop="2dp"
+                                android:paddingBottom="2dp"
+                                android:layout_marginBottom="10dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="FACIAL SERUM"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:textColor="#3E2723" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Sérum facial de efecto inmediato"
+                                android:textSize="11sp"
+                                android:textColor="#8B6F5E"
+                                android:layout_marginTop="4dp"
+                                android:lineSpacingExtra="2dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="65,00 €"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="#C8956C"
+                                android:layout_marginTop="10dp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Producto 3 -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="3dp"
+                        app:cardBackgroundColor="#FFF8F5">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="lou"
+                                android:textSize="10sp"
+                                android:textColor="#FFFFFF"
+                                android:background="@drawable/bg_tag_lou"
+                                android:paddingStart="6dp"
+                                android:paddingEnd="6dp"
+                                android:paddingTop="2dp"
+                                android:paddingBottom="2dp"
+                                android:layout_marginBottom="10dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="HYDRA-AGE CREAM"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:textColor="#3E2723" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Crema antiedad hidratante"
+                                android:textSize="11sp"
+                                android:textColor="#8B6F5E"
+                                android:layout_marginTop="4dp"
+                                android:lineSpacingExtra="2dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="54,00 €"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="#C8956C"
+                                android:layout_marginTop="10dp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Producto 4 -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="3dp"
+                        app:cardBackgroundColor="#FFF8F5">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="lou"
+                                android:textSize="10sp"
+                                android:textColor="#FFFFFF"
+                                android:background="@drawable/bg_tag_lou"
+                                android:paddingStart="6dp"
+                                android:paddingEnd="6dp"
+                                android:paddingTop="2dp"
+                                android:paddingBottom="2dp"
+                                android:layout_marginBottom="10dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="CLEANSE BÁLSAMO"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:textColor="#3E2723" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Bálsamo limpiador natural"
+                                android:textSize="11sp"
+                                android:textColor="#8B6F5E"
+                                android:layout_marginTop="4dp"
+                                android:lineSpacingExtra="2dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="27,00 €"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="#C8956C"
+                                android:layout_marginTop="10dp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- Botón ver catálogo -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnVerCatalogo"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ver catálogo completo"
+                android:textColor="#8B6F5E"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="28dp"
+                app:strokeColor="#8B6F5E"
+                app:cornerRadius="24dp" />
+
+        </LinearLayout>
+
+        <!-- ══════════════════════════════════════ -->
+        <!-- CONTACTO                               -->
+        <!-- ══════════════════════════════════════ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_contacto"
+            android:padding="28dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¿Hablamos?"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF" />
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="3dp"
+                android:background="#C8956C"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CEM Lourdes Iniesta"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Carrer de Sant Josep de Calassanç, 18\n46008 València"
+                android:textSize="14sp"
+                android:textColor="#BCAAA4"
+                android:layout_marginTop="6dp"
+                android:lineSpacingExtra="3dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="+34 654 65 91 35"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#C8956C"
+                android:layout_marginTop="12dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLlamar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Llamar ahora"
+                android:textColor="#3E2723"
+                android:backgroundTint="#C8956C"
+                android:layout_marginTop="20dp"
+                app:cornerRadius="24dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
