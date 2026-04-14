@@ -161,7 +161,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="\"Cuando tu conducta coincide con tus intenciones, cuando tus acciones están de acuerdo a tus pensamientos, cuando tu mente, tu corazón y tu cuerpo actúan juntos...\""
+                        android:text="&quot;Cuando tu conducta coincide con tus intenciones, cuando tus acciones están de acuerdo a tus pensamientos, cuando tu mente, tu corazón y tu cuerpo actúan juntos...&quot;"
                         android:textSize="13sp"
                         android:textColor="#5D4037"
                         android:textStyle="italic"
